@@ -235,12 +235,12 @@ if st.button("✅ Submit Order"):
                 [f"{item['SKU']} - Qty: {item['QTY']}" for item in st.session_state.cart]
             )
 
-           body = f"""
+            body = f"""
 📦 ORDER CONFIRMATION
 
 Hello {user_name},
 
-Your order has been successfully placed.
+Your order has been successfully Billed.
 
 ━━━━━━━━━━━━━━━━━━━━━━
 🧾 Order Details
@@ -251,9 +251,7 @@ Your order has been successfully placed.
 📦 Items:
 {order_details}
 
-━━━━━━━━━━━━━━━━━━━━━━
-📌 Status: Processing
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Thank you for your order 🙌
 
