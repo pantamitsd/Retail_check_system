@@ -6,6 +6,7 @@ import threading
 import pytz
 import smtplib
 from email.mime.text import MIMEText
+import os
 
 st.title("📦 Retail Order Management")
 
@@ -57,8 +58,8 @@ if "EMAIL" in party_df.columns:
 # EMAIL FUNCTION
 # -----------------------------
 def send_email(to_email, subject, body):
-    sender_email = "amitpantdataanalyst@gmail.com"
-    app_password = "joth gbki xaui apst"
+    app_password = os.getenv("EMAIL_PASSWORD")
+    sender_email = os.getenv("EMAIL_USER")
 
     msg = MIMEText(body)
     msg["Subject"] = subject
